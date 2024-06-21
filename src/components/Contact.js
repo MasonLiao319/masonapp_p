@@ -75,25 +75,25 @@ export const Contact = () => {
                   <h2>Get In Touch</h2>
                   <form onSubmit={handleSubmit}>
                     <Row>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col size={12} sm={6} className="px-1 col-half">
                         <input type="text" value={formDetails.firstName} placeholder="First Name *" onChange={(e) => onFormUpdate('firstName', e.target.value)} required />
                       </Col>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col size={12} sm={6} className="px-1 col-half">
                         <input type="text" value={formDetails.lastName} placeholder="Last Name *" onChange={(e) => onFormUpdate('lastName', e.target.value)} required />
                       </Col>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col size={12} sm={6} className="px-1 col-half">
                         <input type="email" value={formDetails.email} placeholder="Email Address *" onChange={(e) => onFormUpdate('email', e.target.value)} required />
                       </Col>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col size={12} sm={6} className="px-1 col-half">
                         <input type="tel" value={formDetails.phone} placeholder="Phone No." onChange={(e) => onFormUpdate('phone', e.target.value)} />
                       </Col>
-                      <Col size={12} className="px-1">
+                      <Col size={12} className="px-1 col-full">
                         <div className="date-wrapper">
                           <label>Select your preferred meeting date</label>
                           <input type="date" value={formDetails.date} min={getTodayDate()} onChange={(e) => onFormUpdate('preferredDate', e.target.value)} />
                         </div>
                       </Col>
-                      <Col size={12} className="px-1">
+                      <Col size={12} className="px-1 col-full">
                         <textarea rows="6" value={formDetails.message} placeholder="Message *" onChange={(e) => onFormUpdate('message', e.target.value)} required></textarea>
                         <button type="submit"><span>{buttonText}</span></button>
                       </Col>

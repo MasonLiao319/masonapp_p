@@ -574,38 +574,46 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
 }
+
+@media (min-width: 1024px) {
+  .contact form .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contact form .row .col-half {
+    flex: 1 1 50%;
+    padding: 0 10px;
+  }
+  .contact form .row .col-full {
+    flex: 1 1 100%;
+  }
+}
+
 @media (max-width: 1024px) {
   .date-wrapper {
     flex-direction: column;
     align-items: flex-start;
-    
   }
-  .date-wrapper label{
-      margin-left: 15px;
-      width: 100%;
-     
-    }
-  
-
-   .date-wrapper input {
+  .date-wrapper label {
+    margin-left: 15px;
     width: 100%;
-
   }
-
+  .date-wrapper input {
+    width: 100%;
+  }
 }
+
 @media (max-width: 768px) {
   .date-wrapper {
     flex-direction: column;
     align-items: flex-start;
   }
-  .date-wrapper label
-  {
+  .date-wrapper label {
     width: 100%;
     margin: 5px 0;
     margin-left: 20px;
   }
-  .date-wrapper input 
-  {
+  .date-wrapper input {
     width: 100%;
     margin: 5px 0;
   }
@@ -617,7 +625,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     padding: 0 0 8px 0;
   }
 }
-
 
 /************ Footer Css ************/
 .footer {
