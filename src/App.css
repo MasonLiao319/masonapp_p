@@ -67,10 +67,12 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
+
 @media (min-width:1700px) {
-	main .container {
+	main.container {
 		max-width: 100%;
 		padding: 0 150px;
+    
 	}
 }
 
@@ -157,7 +159,7 @@ span.navbar-text {
   font-weight: 700;
   color: #fff;
   border: 1px solid #fff;
-  padding: 18px 34px;
+  padding: 12px 30px;
   font-size: 18px;
   margin-left: 18px;
 	position: relative;
@@ -586,7 +588,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   .contact form .row .col-full {
     flex: 1 1 100%;
-  }
+  } 
 }
 
 @media (max-width: 1024px) {
@@ -712,4 +714,129 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin: 0; /* 去除默认的外边距 */
+}
+
+@media (max-width: 768px) {
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    margin-top: 1px;
+    padding: 0 15px;
+    font-size: 16px;
+  }
+
+  .navbar-text button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .social-icon a {
+    width: 30px; /* 在小屏幕上进一步减小图标大小 */
+    height: 30px;
+  }
+
+  .social-icon a::before {
+    width: 30px; /* 确保与父元素大小一致 */
+    height: 30px;
+  }
+
+  .social-icon a img {
+    width: 100%; /* 在小屏幕上调整图标大小 */
+  }
+  .navbar-text button{
+    padding: 7px 20px;
+    font-size: 14px;
+    margin-left: 15px;
+  }
+ 
+  .banner {
+    padding: 180px 20px 60px 20px;
+  }
+  .banner .tagline {
+    margin-top: 3px;
+    font-size: 14px;
+  }
+  .banner h1 {
+    font-size: 30px;
+  }
+  .banner p {
+    font-size: 14px;
+  }
+  .banner button {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+  .banner button svg {
+    font-size: 20px;
+  }
+  .skill {
+    padding: 0 20px 30px 20px;
+  }
+  .skill h2 {
+    font-size: 25px;
+  }
+  .skill p {
+    font-size: 12px;
+    margin: 14px 0 50px 0;
+  }
+  .skill-bx {
+    padding: 40px 30px;
+    margin-top: -40px;
+  }
+  
+  .project {
+    padding: 40px 20px;
+  }
+  .project h2 {
+    font-size: 25px;
+  }
+  .project p {
+    font-size: 12px;
+    width: 80%;
+  }
+  .project .nav.nav-pills .nav-link {
+    font-size: 9.5px;
+    padding: 12px 0;
+  }
+  .contact {
+    padding: 40px 20px 50px 20px;
+  }
+  .contact h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .contact form input, .contact form textarea {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+  .contact form button {
+    padding: 10px 30px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .date-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .date-wrapper label {
+    width: 100%;
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+  .date-wrapper input {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 20px 20px;
+  }
+  .footer p {
+    font-size: 12px;
+  }
+  .footer .social-icon {
+    margin-bottom: 15px;
+  }
+  .footer .social-icon a {
+    margin: 0 8px;
+  }
 }
