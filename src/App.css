@@ -239,7 +239,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  background-image: url('./assets/img/banner-bg.jpg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -291,15 +291,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   animation: updown 3s linear infinite;
 }
 @keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite; /* Adjust the 4s to control the speed */
+  position: relative;
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
@@ -309,41 +314,48 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
+  background-image: url('./assets/img/banner-bg.jpg'); /* 添加背景图片 */
+  background-size: cover; /* 确保图片覆盖整个容器 */
+  background-position: center; /* 居中显示背景图片 */
+  background-repeat: no-repeat; /* 防止背景图片重复 */
 }
+
 .skill-bx {
-  background: #151515;
+  background: rgba(21, 21, 21, 0.8); /* 添加透明背景以区分内容和背景图片 */
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
 }
+
 .skill h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 45px;
+  font-weight: 700;
 }
+
 .skill p {
-    color: #B8B8B8;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px 0 75px 0;
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
 }
+
 .skill-slider {
   width: 80%;
   margin: 0 auto;
   position: relative;
 }
+
 .skill-slider .item img {
   width: 50%;
   margin: 0 auto 15px auto;
 }
+
 .background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
+  display: none; /* 隐藏多余的背景图片 */
 }
+
 
 /************ Projects Css ************/
 .project {
@@ -394,7 +406,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background: linear-gradient(90.21deg,#8088FF  -5.91%,  rgba(74, 47, 189, 0.5) 111.58%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -426,7 +438,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg,rgba(74, 47, 189, 0.5)  -5.91%,#8088FF  111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
