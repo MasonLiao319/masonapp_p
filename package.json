@@ -2,6 +2,7 @@
   "name": "masonapp",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://masonliao319.github.io/masonapp_p",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -25,11 +26,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "react-scripts --max_old_space_size=2048 start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject"
-},
+    "start": "react-scripts --max_old_space_size=2048 start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -50,6 +53,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@babel/plugin-transform-private-property-in-object": "^7.24.7"
+    "@babel/plugin-transform-private-property-in-object": "^7.24.7",
+    "gh-pages": "^6.1.1"
   }
 }
