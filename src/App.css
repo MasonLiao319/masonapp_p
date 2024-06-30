@@ -785,7 +785,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 20px;
   }
   .skill {
-    padding: 0 0 30px 20px;
+    padding: 0 20px 30px 20px;
   }
   .skill h2 {
     font-size: 25px;
