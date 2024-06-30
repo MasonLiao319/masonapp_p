@@ -85,12 +85,12 @@ p.danger {
 }
 /************ Navbar Css ************/
 nav.navbar {
-  padding: 18px 0;
-  position: fixed;
+  padding: 12px 0;
   width: 100%;
   top: 0;
   z-index: 9999;
-  transition:  0.32s ease-in-out;
+  transition: 0.32s ease-in-out;
+  background: rgba(0, 0, 0, 0); /* 完全透明 */
 }
 nav.navbar.scrolled {
   padding: 0px 0;
@@ -238,7 +238,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
+  padding: 100px 0 100px 0;
   background-image: url('./assets/img/banner-bg.jpg');
   background-position: top center;
   background-size: cover;
@@ -361,7 +361,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background-image: url('./assets/img/banner-bg.jpg');
+  background-size: cover; /* 确保图片覆盖整个容器 */
+  background-position: center; /* 居中显示背景图片 */
+  background-repeat: no-repeat; /* 防止背景图片重复 */
+
 }
 .project h2 {
 	font-size: 45px;
@@ -761,7 +765,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
  
   .banner {
-    padding: 180px 20px 60px 20px;
+    padding: 60px 20px 60px 20px;
   }
   .banner .tagline {
     margin-top: 3px;
@@ -781,13 +785,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 20px;
   }
   .skill {
-    padding: 0 20px 30px 20px;
+    padding: 0 0 30px 20px;
   }
   .skill h2 {
     font-size: 25px;
   }
   .skill p {
-    font-size: 12px;
+    font-size: 14px;
     margin: 14px 0 50px 0;
   }
   .skill-bx {
@@ -802,12 +806,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 25px;
   }
   .project p {
-    font-size: 12px;
-    width: 80%;
+    font-size: 14px;
+    width: 100%;
   }
   .project .nav.nav-pills .nav-link {
     font-size: 9.5px;
-    padding: 12px 0;
+    padding: 8px 0;
+    width: 100%;
   }
   .contact {
     padding: 40px 20px 50px 20px;

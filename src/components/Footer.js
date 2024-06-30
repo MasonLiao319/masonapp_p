@@ -21,7 +21,7 @@ export const Footer = () => {
               <a href="https://github.com/MasonLiao319"><img src={navIcon2} alt="github-Icon" /></a>
               <a href="mailto:alienml@yahoo.com"><img src={navIcon3} alt="email-Icon" /></a>
             </div>
-            <p>Copyright 2024. All Rights Reserved</p>
+            <p>Copyright © 2024 Mason Liao</p>
           </Col>
         </Row>
       </Container>
