@@ -26,6 +26,11 @@ export const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const today = getTodayDate();
+    if (formDetails.preferredDate < today) {
+      setStatus({ success: false, message: 'Preferred date cannot be before today.' });
+      return;
+    }
     setButtonText("Sending...");
     try {
       let response = await fetch("https://masonappbackend-production.up.railway.app/contact", { // 更新后的 URL
@@ -90,7 +95,7 @@ export const Contact = () => {
                       <Col size={12} className="px-1 col-full">
                         <div className="date-wrapper">
                           <label>Select your preferred meeting date</label>
-                          <input type="date" value={formDetails.date} min={getTodayDate()} onChange={(e) => onFormUpdate('preferredDate', e.target.value)} />
+                          <input type="date" value={formDetails.preferredDate} min={getTodayDate()} onChange={(e) => onFormUpdate('preferredDate', e.target.value)} />
                         </div>
                       </Col>
                       <Col size={12} className="px-1 col-full">
