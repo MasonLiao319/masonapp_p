@@ -42,7 +42,6 @@ export const Banner = () => {
     return () => { clearInterval(ticker) };
   }, [tick, delta]);
 
-  // 添加 handleConnectClick 函数
   const handleConnectClick = () => {
     window.location.href = 'https://www.linkedin.com/in/mason-liao-07037b181'; 
   };
@@ -55,7 +54,8 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <h1>{`Hi! I'm Mason Liao.`} <span className="txt-rotate" dataperiod="1000" data-rotate='[ "Software Engineer", "Web Developer", "Web Designer" ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`Hi! I'm Mason Liao.`}</h1>
+                <h1><span className="txt-rotate" dataperiod="1000" data-rotate='[ "Software Engineer", "Web Developer", "Web Designer" ]'><span className="wrap">{text}</span></span></h1>
                 <p> I am a full stack web developer and software developer. I specialize in creating websites and setting up AI chatbots, and I enjoy building practical apps and games in my free time. Whether you need a personal site, a business platform, a unique application, or an AI chatbot for your website, I’m here to help bring your ideas to life.</p>
                 <button onClick={handleConnectClick}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
