@@ -9,18 +9,24 @@ export const Projects = () => {
   const projects = [
     {
       title: "Project 1",
-      description: "Design & Development",
+      description: "Design & Development fddgv",
       imgUrl: projImg1,
+      date: "July 6, 2024",
+      link: "#"
     },
     {
       title: "Project 2",
       description: "Design & Development",
       imgUrl: projImg2,
+      date: "July 6, 2024",
+      link: "#"
     },
     {
       title: "Project 3",
       description: "Design & Development",
       imgUrl: projImg3,
+      date: "July 6, 2024",
+      link: "#"
     },
   ];
 
@@ -36,11 +42,18 @@ export const Projects = () => {
                   <p>Explore my portfolio of independently completed projects, demonstrating my expertise in web development, Python programming, and network security.</p>
                   <div className="project-card-container">
                     {projects.map((project, index) => (
-                      <div className="project-card proj-imgbx" key={index}>
-                        <img src={project.imgUrl} alt={project.title} />
-                        <div className="proj-txtx">
+                      <div className="project-card" key={index}>
+                        <div className="project-card-image">
+                          <div className="overlay">
+                            <h3 className="overlay-text">{project.title}</h3>
+                          </div>
+                          <img src={project.imgUrl} alt={project.title} />
+                        </div>
+                        <div className="project-info">
                           <h4>{project.title}</h4>
-                          <span>{project.description}</span>
+                          <p className="description">{project.description}</p>
+                          <p className="date"><i className="far fa-calendar-alt"></i> {project.date}</p>
+                          <a href={project.link}>Read more</a>
                         </div>
                       </div>
                     ))}

@@ -239,7 +239,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 100px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.jpg');
+  background-image: url('./assets/img/banner-bg.png');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -322,7 +322,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
-  background-image: url('./assets/img/banner-bg.jpg'); /* 添加背景图片 */
+  background-image: url('./assets/img/color-sharp.png'); /* 添加背景图片 */
   background-size: cover; /* 确保图片覆盖整个容器 */
   background-position: center; /* 居中显示背景图片 */
   background-repeat: no-repeat; /* 防止背景图片重复 */
@@ -347,6 +347,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 14px 0 75px 0;
+
+  
 }
 
 .skill-slider {
@@ -409,10 +411,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0 120px 0;
   position: relative;
-  background-image: url('./assets/img/banner-bg.jpg');
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-image: url('./assets/img/color-sharp.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .project h2 {
@@ -428,72 +430,146 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   margin: 14px auto 30px auto;
   text-align: center;
-  width: 56%;
+  width: 70%;
 }
 
-.proj-imgbx {
-  position: relative;
-  border-radius: 18px; /* Adjusted to 15px */
-  overflow: hidden;
-  margin-bottom: 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.project-info h4, .project-info p, .project-info a {
+  text-align: left; /* 将标题、段落和链接文本左对齐 */
+  width: 100%; /* 确保文本元素宽度占满容器 */
 }
 
-.proj-imgbx img {
-  width: 100%;
-  border-radius: 18px; /* Adjusted to 15px */
-  transition: transform 0.3s ease;
-}
-
-.proj-imgbx:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.proj-imgbx:hover img {
-  transform: scale(1.1);
-}
-
-.proj-txtx {
-  position: absolute;
-  text-align: center;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.5s ease-in-out;
-  opacity: 0;
-  width: 100%;
-}
-
-.proj-imgbx:hover .proj-txtx {
-  top: 50%;
-  opacity: 1;
-}
-
-.proj-txtx h4 {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1.1em;
-}
-
-.proj-txtx span {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.8px;
+.project-card-image img {
+  display: block; /* 确保图片默认居中对齐 */
+  margin: 0 auto; /* 自动边距实现水平居中 */
 }
 
 .project-card-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
   width: 100%;
 }
 
 .project-card {
-  width: 40%; /* Increased width for larger cards */
-  margin: 15px;
+  background: #212121;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  width: calc(33.333% - 20px);
+  max-width: 340px; /* Set maximum width */
+  min-height: 400px; /* Set minimum height */
+  height: 400px; /* Set fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card-image {
+  position: relative;
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay-text {
+  font-size: 20px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.project-info h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center; /* Ensure title is centered */
+}
+
+.project-info p {
+  font-size: 16px;
+  color: #fff;
+  text-align: left;
+}
+
+.project-info p.description {
+  text-align: left;
+  display: block;
+  white-space: normal;
+  overflow: visible;
+  margin-bottom: 3px;
+}
+
+.project-info p.description:hover {
+  color: #ff69b4;
+}
+
+.project-info .date {
+  font-size: 14px;
+  color: #b8b8b8;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.project-info a {
+  margin-top: 15px; 
+  color: #b8b8b8;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.project-info a:hover {
+  color: #ff69b4;
+}
+
+.project-info a::after {
+  content: '→';
+  margin-left: 5px;
 }
 
 .background-image-right {
@@ -506,12 +582,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
-
-
 /************ Contact Css ************/
 
 .contact {
-  background: linear-gradient(90.21deg, #201b12  -5.91%, #4834a3e1 111.58%);
+  background: linear-gradient(90.21deg, #201b12  -5.91%, #1f1746 111.58%);
   padding: 60px 0 70px 0;
 }
 .contact img {
@@ -618,6 +692,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .contact form .row .col-full {
     flex: 1 1 100%;
   } 
+  .project-card {
+    width: calc(33.333% - 25px); /* 适当增加间距 */
+    height: 440px; /* 可增加高度 */
+    max-width: 380px;
+    min-height: 440px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -845,13 +925,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     width: 100%;
   }
 
+  .project-card {
+    width: 100%; /* 卡片宽度占满整个屏幕宽度 */
+    height: auto; /* 高度自动调整 */
+    min-height: 320px; /* 设置最小高度以保持视觉整洁 */
+  }
+
   .project-card-container {
     flex-direction: column;
   }
 
-  .project-card {
-    width: 95%;
-  }
+  
   .contact {
     padding: 40px 20px 50px 20px;
   }
@@ -922,5 +1006,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .txt-rotate > .wrap {
     font-size: 30px;
     line-height: 30px;
+  }
+
+  .project-card {
+    width: calc(50% - 20px); /* 增加宽度以适应屏幕 */
+    height: 420px; /* 调整高度 */
+    max-width: none; /* 移除最大宽度限制 */
   }
 }
