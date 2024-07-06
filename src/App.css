@@ -365,22 +365,62 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: none; /* 隐藏多余的背景图片 */
 }
 
+.custom-left-arrow,
+.custom-right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.137);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
 
+.custom-left-arrow {
+  left: -1px; /* Adjust the left value to position the arrow correctly */
+}
+
+.custom-right-arrow {
+  right: -1px; /* Adjust the right value to position the arrow correctly */
+}
+
+.custom-left-arrow::before,
+.custom-right-arrow::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.custom-left-arrow::before {
+  transform: rotate(-135deg);
+}
+
+.custom-right-arrow::before {
+  transform: rotate(45deg);
+}
 /************ Projects Css ************/
 .project {
-  padding: 80px 0;
+  padding: 80px 0 120px 0;
   position: relative;
   background-image: url('./assets/img/banner-bg.jpg');
-  background-size: cover; /* 确保图片覆盖整个容器 */
-  background-position: center; /* 居中显示背景图片 */
-  background-repeat: no-repeat; /* 防止背景图片重复 */
-
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
+
 .project h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 45px;
+  font-weight: 700;
   text-align: center;
 }
+
 .project p {
   color: #B8B8B8;
   font-size: 18px;
@@ -390,77 +430,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   width: 56%;
 }
-.project .nav.nav-pills {
-  width: 72%;
-  margin: 0 auto;
-  border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
-  overflow: hidden;
-}
-.project .nav.nav-pills .nav-item {
-  width: 33.33333%;
-}
-.project .nav.nav-pills .nav-link {
-  background-color: transparent;
-  border-radius: 0;
-  padding: 17px 0;
-  color: #fff;
-  width: 100%;
-  font-size: 17px;
-  letter-spacing: 0.8px;
-  font-weight: 500;
-  position: relative;
-  transition: 0.3s ease-in-out;
-  text-align: center;
-  z-index: 0;
-}
-.project .nav.nav-pills .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(90.21deg,#8088FF  -5.91%,  rgba(74, 47, 189, 0.5) 111.58%);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
-}
-.project .nav.nav-pills .nav-link.active::before {
-    width: 100% !important;
-}
-.project .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(255, 255, 255, 1);
-}
-.nav-link#projects-tabs-tab-first {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 0px 0px 55px;
-}
-.nav-link#projects-tabs-tab-second {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-.nav-link#projects-tabs-tab-third {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0 55px 55px 0;
-}
+
 .proj-imgbx {
   position: relative;
-  border-radius: 30px;
+  border-radius: 18px; /* Adjusted to 15px */
   overflow: hidden;
   margin-bottom: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.proj-imgbx::before {
-  content: "";
-  background: linear-gradient(90.21deg,rgba(74, 47, 189, 0.5)  -5.91%,#8088FF  111.58%);
-  opacity: 0.85;
-  position: absolute;
+
+.proj-imgbx img {
   width: 100%;
-  height: 0;
-  transition: 0.4s ease-in-out;
+  border-radius: 18px; /* Adjusted to 15px */
+  transition: transform 0.3s ease;
 }
-.proj-imgbx:hover::before {
-  height: 100%;
+
+.proj-imgbx:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
+
+.proj-imgbx:hover img {
+  transform: scale(1.1);
+}
+
 .proj-txtx {
   position: absolute;
   text-align: center;
@@ -471,22 +464,38 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   opacity: 0;
   width: 100%;
 }
+
 .proj-imgbx:hover .proj-txtx {
   top: 50%;
   opacity: 1;
 }
+
 .proj-txtx h4 {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
 }
+
 .proj-txtx span {
   font-style: italic;
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.8px;
 }
+
+.project-card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.project-card {
+  width: 40%; /* Increased width for larger cards */
+  margin: 15px;
+}
+
 .background-image-right {
   top: 20%;
   position: absolute;
@@ -496,14 +505,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-@media (max-width: 768px) {
-  .project .nav.nav-pills .nav-link {
-    font-size: 11px;
-  }
 
 
 
-}
 /************ Contact Css ************/
 
 .contact {
@@ -768,9 +772,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 
   .navbar-text .vvd {
-    padding: 9px 21px; /* Make the button smaller */
-    font-size: 14px; /* Smaller font size */
-    margin-left: 2px;
+    padding: 9px 21px; 
+    font-size: 14px; 
+    margin-left: 3px;
   }
   .banner {
     padding: 60px 20px 60px 20px;
@@ -826,7 +830,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   
   .project {
-    padding: 40px 20px;
+    padding: 30px 20px 80px 20px;
   }
   .project h2 {
     font-size: 25px;
@@ -839,6 +843,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 9.5px;
     padding: 8px 0;
     width: 100%;
+  }
+
+  .project-card-container {
+    flex-direction: column;
+  }
+
+  .project-card {
+    width: 95%;
   }
   .contact {
     padding: 40px 20px 50px 20px;
