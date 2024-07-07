@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg1 from "../assets/img/coming-soon.jpg";
+import projImg2 from "../assets/img/coming-soon.jpg";
+import projImg3 from "../assets/img/coming-soon.jpg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
