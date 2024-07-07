@@ -9,7 +9,7 @@ export const Projects = () => {
   const projects = [
     {
       title: "Project 1",
-      description: "Design & Development fddgv",
+      description: "Design & Development",
       imgUrl: projImg1,
       date: "July 6, 2024",
       link: "#"
